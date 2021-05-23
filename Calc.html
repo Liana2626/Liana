@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+    <div id="Tableau" onclick="Calcul()"></div>
+<script>
+
+function Calcul() {
+    console.log('test')
+    if (!isNan(Number(event.target.innerhtml))) {
+console.log('a number');
+Number(event.target.innerhtml) % 2 ==0
+? (event.target.style = "color:red") 
+: (event.target.style = "color:blue");        
+    }
+}
+let res = "<table border=1>";
+    for (let rows = 1; rows <= 10; rows++){
+       
+res += "<tr>";
+    for (let cols = 1; cols <= 10; cols++) {
+        res += `<td> ${cols * rows} </td>`;
+        
+    }
+res += "</tr>";
+    }
+res += "</table>";
+Tableau.innerHTML = res;
+
+</script>
+
+
+</body>
+</html>
